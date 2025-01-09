@@ -6,7 +6,7 @@ class Solution:
         while low <= high:
             mid = (low + high) // 2
             
-            # Check if mid is a peak element
+            # Check if mid is a 
             left = float('-inf') if mid == 0 else arr[mid - 1]
             right = float('-inf') if mid == n - 1 else arr[mid + 1]
             
