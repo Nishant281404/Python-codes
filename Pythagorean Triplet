@@ -1,0 +1,14 @@
+###################################################### ----> APPROACH 1 OR NAIVE APPROACH<------------#########################################################
+class Solution:
+
+	def checkTriplet(self,arr):
+	    n= len(arr)
+	    for i in range(0,n-2): # iterating til  last second last element
+	        for j in range(i+1,n-1):
+	            for k in range(n):
+	                x = arr[i]*arr[i]
+	                y = arr[j]*arr[j]
+	                z = arr[k]*arr[k]
+	                if x == y+z or y == x+z or z == x+y:
+	                    return True  
+	    return False  
