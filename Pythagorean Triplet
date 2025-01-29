@@ -12,3 +12,31 @@ class Solution:
 	                if x == y+z or y == x+z or z == x+y:
 	                    return True  
 	    return False  
+
+
+#################################################### -----> Optimal <---------------------------------####################################################
+class Solution:
+    def checkTriplet(self, arr):
+        n = len(arr)
+        
+        # Square all elements
+        for i in range(n):
+            arr[i] = arr[i] * arr[i] // arr=[x*x for x in arr]
+        
+        # Sort the squared values
+        arr.sort()
+        
+        # Iterate from the largest element to the smallest
+        for i in range(n - 1, 1, -1):  # i is the hypotenuse index
+            l, r = 0, i - 1  # Two-pointer 
+            
+            while l < r:
+                if arr[l] + arr[r] == arr[i]:
+                    return True  
+                
+                if arr[l] + arr[r] < arr[i]:
+                    l += 1  # Increase sum
+                else:
+                    r -= 1  # Decrease sum
+        
+        return False  
