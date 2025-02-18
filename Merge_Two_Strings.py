@@ -21,6 +21,8 @@ class Solution:
         while i<len(S1) and j<len(S2):
             res.append(S1[i])
             res.append(S2[j])
+            i+=1
+            j+=1
         res.append(S1[i])    
         res.append(S2[j])
         return "".join(res)
