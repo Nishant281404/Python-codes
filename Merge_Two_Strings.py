@@ -23,7 +23,11 @@ class Solution:
             res.append(S2[j])
             i+=1
             j+=1
-        res.append(S1[i])    
-        res.append(S2[j])
-        return "".join(res)
+        while i != len(S1):
+            res.append(S1[i])
+            i+=1
+        while j != len(S2):
+            res.append(S2[j])
+            j+=1
+        return "".join(res)    
         # code here
