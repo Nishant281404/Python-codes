@@ -12,7 +12,7 @@ class Solution:
         while j != len(S2):
             s += S2[j]
         return s    # can generate TLE
-################################### APPROACH 2 ---> also generating TLE ###########################       
+################################### APPROACH 2###########################       
         
 class Solution:
     def merge(self, S1, S2):
